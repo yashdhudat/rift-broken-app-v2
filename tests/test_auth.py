@@ -20,4 +20,9 @@ def test_is_admin_true():
 def test_is_admin_missing_role():
     from src.auth import is_admin
     user = {}
+    assert not is_admin(user) 
+
+def test_is_admin_with_other_roles():
+    from src.auth import is_admin
+    user = {'role': 'other'}
     assert not is_admin(user)
