@@ -10,4 +10,9 @@ def test_generate_token():
 def test_is_admin_false():
     from src.auth import is_admin
     user = {'role': 'user'}
-    assert is_admin(user) == False
+    assert not is_admin(user)
+
+def test_is_admin_true():
+    from src.auth import is_admin
+    user = {'role': 'admin'}
+    assert is_admin(user)
