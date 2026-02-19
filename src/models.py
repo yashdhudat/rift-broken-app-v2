@@ -1,5 +1,5 @@
-class User
-    def __init__(self, name, age, email):  # SYNTAX error line 1 — missing colon
+class User:
+    def __init__(self, name, age, email):  
         self.name = name
         self.age = age
         self.email = email
@@ -7,7 +7,7 @@ class User
     def get_info(self):
         return {
             'name': self.name,
-            'age': self.age + "years",  # TYPE_ERROR line 9
+            'age': self.age + "years",  
             'email': self.email
         }
 
