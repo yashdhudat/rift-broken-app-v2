@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/validate', methods=['POST'])
 def validate():
-data = request.get_json()  # INDENTATION error line 8
+    data = request.get_json()  
     email = data.get('email', '')
     if validate_email(email):
         return jsonify({'valid': True})
@@ -13,4 +13,4 @@ data = request.get_json()  # INDENTATION error line 8
 
 @app.route('/health')
 def health():
-        return jsonify({'status': 'ok'})  # INDENTATION error line 16
+    return jsonify({'status': 'ok'})
